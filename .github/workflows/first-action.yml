@@ -1,0 +1,19 @@
+#First we must name our Workflow
+name: First Workflow
+
+#Define the Events on which this Workflow will be triggered
+#This is an Event that waits for the user to manually start the Workflow
+on: workflow_dispatch
+
+#The work that will be done, must be indented to list all the jobs that you wanna have
+jobs:
+  first-job:
+    #define the runner where the job will be executed, OS and hardware specs depend on the runner
+    runs-on: ubuntu-latest
+    #define the steps that will be executed, must have indentations and each step has a dash
+    steps:
+      - name: Print greeting
+        run: echo "Hello World!"
+      - name: Print goodbye
+        run: echo "Done - bye!"
+      
